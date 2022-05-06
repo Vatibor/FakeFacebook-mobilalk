@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">FakeFacebook</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="login">Log In</string>
+    <string name="sign_up_for_facebook">Sign Up for Facebook</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="registration">Registration</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="password_again">Password Again</string>
+    <string name="full_name">Full Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="policy_long_text">By signing up, you agree to our Terms, Data Policy and Cookies Policy.</string>
+    <string name="log_out">Log Out</string>
+    <string name="search">Search</string>
+    <string name="new_post">New Post</string>
+    <string name="facebook_logo">facebook logo</string>
+    <string name="what_s_on_your_mind">What\'s on your mind?</string>
+    <string name="picture_url">Picture URL</string>
+    <string name="post">Post</string>
+    <string name="save">Save</string>
+    <string name="edit_your_post">Edit your post</string>
+    <string name="cancel">Cancel</string>
+    <string name="edit_post">Edit Post</string>
+    <string name="delete_post">Delete Post</string>
+    <string name="delete">delete</string>
+    <string name="edit_delete_post">Edit/Delete Post</string>
+</resources>

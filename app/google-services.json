@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "525407901956",
+    "firebase_url": "https://fakefacebook-mobilalk-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "fakefacebook-mobilalk",
+    "storage_bucket": "fakefacebook-mobilalk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525407901956:android:4fe69b51d3f7a37dee5851",
+        "android_client_info": {
+          "package_name": "com.fakefacebook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525407901956-ththtv4ek0mk130u77nreu6ttgnblndf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fakefacebook",
+            "certificate_hash": "6a30241f6b6c905f149ca5eff208e4a337a2138d"
+          }
+        },
+        {
+          "client_id": "525407901956-vufme4shfoe2hfq5sn4gbsdjadkf2kfc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBltcxwMFw3BCLxa2C85WKeJ3F_kKQ882E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525407901956-vufme4shfoe2hfq5sn4gbsdjadkf2kfc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
