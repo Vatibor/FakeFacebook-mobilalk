@@ -1,11 +1,14 @@
 package com.fakefacebook;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,20 +19,23 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
+public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> implements Filterable {
     private ArrayList<PostModel> postModelsArrayList;
+    private ArrayList<PostModel> postModelsArrayListAll;
     private Context context;
     int lastPos = -1;
     private PostClickInterface postClickInterface;
 
     public PostAdapter(ArrayList<PostModel> postModelsArrayList, Context context, PostClickInterface postClickInterface) {
         this.postModelsArrayList = postModelsArrayList;
+        this.postModelsArrayListAll = postModelsArrayList;
         this.context = context;
         this.postClickInterface = postClickInterface;
     }
 
     public PostAdapter(ArrayList<PostModel> postModelsArrayList, Context context) {
         this.postModelsArrayList = postModelsArrayList;
+        this.postModelsArrayListAll = postModelsArrayList;
         this.context = context;
     }
 
@@ -52,7 +58,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                postClickInterface.onPostClick(position);
+                postClickInterface.onPostClick(holder.getAdapterPosition());//position);
             }
         });
     }
@@ -69,6 +75,43 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
     public int getItemCount() {
         return postModelsArrayList.size();
     }
+
+    @Override
+    public Filter getFilter() {
+        return postFilter;
+    }
+
+    private Filter postFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence charSequence) {
+            ArrayList<PostModel> filteredList = new ArrayList<>();
+            FilterResults results = new FilterResults();
+
+            if(charSequence == null || charSequence.length() == 0){
+                results.count = postModelsArrayListAll.size();
+                results.values = postModelsArrayListAll;
+            } else {
+                String filterPattern = charSequence.toString().toLowerCase().trim();
+
+                for(PostModel item : postModelsArrayListAll){
+                    if(item.getTextField().toLowerCase().contains(filterPattern)){
+                        filteredList.add(item);
+                    }
+                }
+                results.count = filteredList.size();
+                results.values = filteredList;
+            }
+
+            return results;
+        }
+
+        @SuppressLint("NotifyDataSetChanged")
+        @Override
+        protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+            postModelsArrayList = (ArrayList) filterResults.values;
+            notifyDataSetChanged();
+        }
+    };
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private TextView userNameTV, dateTV, postTextTV;

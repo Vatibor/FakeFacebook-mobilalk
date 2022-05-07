@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/comfortaaregular"
-            android:inputType="textLongMessage"
+            android:inputType="textMultiLine|textMultiLine"
             tools:ignore="SpeakableTextPresentCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -57,8 +57,7 @@
         app:hintTextColor="@color/white"
         android:layout_below="@+id/textFieldNP"
         android:layout_marginTop="15dp"
-        app:boxBackgroundColor="@color/facebook_blue_400"
-        app:endIconMode="password_toggle">
+        app:boxBackgroundColor="@color/facebook_blue_400">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"

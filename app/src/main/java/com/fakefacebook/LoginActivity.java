@@ -32,12 +32,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        loadingPB = (ProgressBar) findViewById(R.id.idPBLoading);
         loginButton = findViewById(R.id.loginButton);
         loginButton.setOnClickListener(this);
         registrationButton = findViewById(R.id.registrationButton);
         registrationButton.setOnClickListener(this);
-        loadingPB = findViewById(R.id.idPBLoading);
+
         email = findViewById(R.id.textFieldEmail);
         password = findViewById(R.id.textFieldPassword);
 
@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.loginButton:
-                String emailStr = Objects.requireNonNull(email.getEditText()).getText().toString();
+                String emailStr = Objects.requireNonNull(email.getEditText()).getText().toString().trim();
                 String passwordStr = Objects.requireNonNull(password.getEditText()).getText().toString();
 
                 boolean isValid = true;
@@ -66,14 +66,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 }
 
                 if (isValid) {
-                    //loadingPB.setVisibility(View.VISIBLE);
+                    loadingPB.setVisibility(View.VISIBLE);
                     Log.i(LOG_TAG, "Bejelentkezett: " + emailStr + ", jelszó: " + passwordStr);
 
                     mAuth.signInWithEmailAndPassword(emailStr, passwordStr).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                //loadingPB.setVisibility(View.GONE);
+                                loadingPB.setVisibility(View.GONE);
                                 Log.d(LOG_TAG, "User logged in successfully!");
                                 Toast.makeText(LoginActivity.this, "User login successfully! :)", Toast.LENGTH_LONG).show();
                                 goMainPage();

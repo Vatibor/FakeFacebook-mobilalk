@@ -11,25 +11,10 @@
         app:backgroundTint="@color/facebook_blue_400"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_margin="20dp"
         android:padding="10dp"
         android:text="@string/edit_delete_post"
         android:textColor="@color/white"
         android:textSize="18sp" />
-
-<!--    <Button-->
-<!--        android:id="@+id/deleteButton"-->
-<!--        app:backgroundTint="@color/facebook_blue_400"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@+id/editButton"-->
-<!--        android:layout_margin="20dp"-->
-<!--        android:padding="10dp"-->
-<!--        android:text="@string/delete_post"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="18sp" />-->
-
 
 </RelativeLayout>
