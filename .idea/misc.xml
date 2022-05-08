@@ -4,13 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/drawable/ic_add.xml" value="0.144" />
+        <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/drawable/ic_facebook.xml" value="0.1" />
         <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/drawable/progress_back.xml" value="0.1" />
         <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/layout-land/activity_add_post.xml" value="0.18562610229276896" />
         <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/layout-land/activity_edit_post.xml" value="0.21164021164021163" />
-        <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/layout-land/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/layout-land/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/layout-land/activity_main.xml" value="0.21164021164021163" />
         <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/layout-land/activity_registration.xml" value="0.264" />
-        <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/layout/activity_add_post.xml" value="0.264" />
+        <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/layout-sw600dp/activity_login.xml" value="0.125" />
+        <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/layout/activity_add_post.xml" value="0.2" />
         <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/layout/activity_edit_post.xml" value="0.2" />
         <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/vatib/Desktop/Prog_2022/mobil_alkfejl/FakeFacebook/app/src/main/res/layout/activity_main.xml" value="0.1" />

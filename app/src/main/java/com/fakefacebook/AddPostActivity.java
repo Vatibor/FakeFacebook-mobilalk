@@ -34,6 +34,7 @@ public class AddPostActivity extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private String postID;
+    private NotificationHandler mNotificationHandler;
 
     private LocalDateTime dateTime;
     private DateTimeFormatter myFormatDate;
@@ -53,6 +54,7 @@ public class AddPostActivity extends AppCompatActivity {
         loadingPB = findViewById(R.id.idPBLoading);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Posts");
+        mNotificationHandler = new NotificationHandler(this);
 
         postButton.setOnClickListener(new View.OnClickListener(){
             @RequiresApi(api = Build.VERSION_CODES.O)
@@ -97,6 +99,7 @@ public class AddPostActivity extends AppCompatActivity {
                             Log.d(LOG_TAG, "onDataChange functions");
                             databaseReference.child(postID).setValue(postModel);
                             Toast.makeText(AddPostActivity.this, "Awesome! You created a post!", Toast.LENGTH_SHORT).show();
+                            mNotificationHandler.send("New post on your feed!");
                             startActivity(new Intent(AddPostActivity.this, MainActivity.class));
                         }
 

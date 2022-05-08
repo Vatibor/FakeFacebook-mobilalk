@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements PostAdapter.PostC
     private ArrayList<PostModel> postModelsArrayList;
     private PostAdapter postAdapter;
     private RelativeLayout bottomsheetRL;
-
+    private NotificationHandler mNotificationHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements PostAdapter.PostC
         postRV.setAdapter(postAdapter);
 
         bottomsheetRL = findViewById(R.id.idRLBSheet);
+        mNotificationHandler = new NotificationHandler(this);
 
         addFAB.setOnClickListener(new View.OnClickListener() {
             @Override
